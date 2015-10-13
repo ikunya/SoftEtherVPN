@@ -1,0 +1,20 @@
+#based on ufw.conf
+description "SoftEther VPN Server"
+author  "AWASHIRO Ikuya"
+
+start on (starting network-interface
+          or starting network-manager
+          or starting networking)
+stop on runlevel [!023456]
+
+pre-start exec /usr/bin/vpnserver start
+post-stop exec /usr/bin/vpnserver stop
+respawn
+respawn limit 15 5
+
+#If you want to know the tap device name, you may run "ip tuntap".
+#post-start script
+#          sleep 10
+#          ifup tap_softether
+#end script
+#pre-stop exec ifdown tap_softether

@@ -1,5 +1,12 @@
-softether-vpn (0:4.04.9412-rtm) unstable; urgency=low
+softether-vpn (4.18.9570-rtm+ubuntu1) trusty; urgency=medium
 
-  * Testing debianization
+  * debian/*.init: removed.
+  * debian/*.upstart: added.
 
- -- Dmitry Orlov <me@mosquito.su>  Tue, 4 Feb 2014 20:24:43 +0000
+ -- Ikuya Awashiro <ikuya@fruitsbasket.info>  Tue, 13 Oct 2015 21:01:00 +0900
+
+softether-vpn (4.18.9570-rtm) trusty; urgency=low
+
+  * See: http://www.softether.org/5-download/history
+
+ -- Ikuya Awashiro <ikuya@fruitsbasket.info>  Sun, 26 Jul 2015 14:59:55 +0900
