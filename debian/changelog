@@ -1,3 +1,16 @@
+softether-vpn (4.18.9570-rtm+ubuntu3) wily; urgency=medium
+
+  * add comments if you want to run ifup/ifdown on systemd setting file.
+
+ -- Ikuya Awashiro <ikuya@fruitsbasket.info>  Sun, 03 Jan 2016 18:42:58 +0900
+
+softether-vpn (4.18.9570-rtm+ubuntu2) wily; urgency=medium
+
+  * Initial systemd support.
+    Thanks to https://github.com/SoftEtherVPN/SoftEtherVPN/pull/180.
+
+ -- Ikuya Awashiro <ikuya@fruitsbasket.info>  Tue, 01 Dec 2015 13:12:46 +0900
+
 softether-vpn (4.18.9570-rtm+ubuntu1) trusty; urgency=medium
 
   * debian/*.init: removed.
