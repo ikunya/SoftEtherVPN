@@ -1,3 +1,10 @@
+softether-vpn (4.18.9570-rtm+ubuntu4) wily; urgency=medium
+
+  * debian/*.init: re-added.
+  * debian/*.upstart: removed.
+
+ -- Ikuya Awashiro <ikuya@fruitsbasket.info>  Fri, 26 Feb 2016 16:53:05 +0900
+
 softether-vpn (4.18.9570-rtm+ubuntu3) wily; urgency=medium
 
   * add comments if you want to run ifup/ifdown on systemd setting file.
