@@ -1,3 +1,10 @@
+softether-vpn (4.18.9570-rtm+ubuntu5) wily; urgency=medium
+
+  * debian/patches/disable-sslv2.patch: added.
+    Thanks to https://github.com/SoftEtherVPN/SoftEtherVPN/pull/217
+
+ -- Ikuya Awashiro <ikuya@fruitsbasket.info>  Tue, 08 Mar 2016 15:15:49 +0900
+
 softether-vpn (4.18.9570-rtm+ubuntu4) wily; urgency=medium
 
   * debian/*.init: re-added.
