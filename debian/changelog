@@ -1,3 +1,15 @@
+softether-vpn (4.19.9605-beta+ubuntu1) wily; urgency=medium
+
+  * debian/patches/disable-sslv2.patch: removed. another fixed by upstream.
+
+ -- Ikuya Awashiro <ikuya@fruitsbasket.info>  Tue, 05 Apr 2016 17:08:17 +0900
+
+softether-vpn (4.19.9605-beta) wily; urgency=low
+
+  * See: http://www.softether.org/5-download/history
+
+ -- Ikuya Awashiro <ikuya@fruitsbasket.info>  Sun, 06 Mar 2016 20:11:13 +0900
+
 softether-vpn (4.18.9570-rtm+ubuntu5) wily; urgency=medium
 
   * debian/patches/disable-sslv2.patch: added.
