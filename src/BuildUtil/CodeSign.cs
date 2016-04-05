@@ -3,9 +3,9 @@
 // 
 // SoftEther VPN Server, Client and Bridge are free software under GPLv2.
 // 
-// Copyright (c) 2012-2015 Daiyuu Nobori.
-// Copyright (c) 2012-2015 SoftEther VPN Project, University of Tsukuba, Japan.
-// Copyright (c) 2012-2015 SoftEther Corporation.
+// Copyright (c) 2012-2016 Daiyuu Nobori.
+// Copyright (c) 2012-2016 SoftEther VPN Project, University of Tsukuba, Japan.
+// Copyright (c) 2012-2016 SoftEther Corporation.
 // 
 // All Rights Reserved.
 // 
@@ -260,15 +260,18 @@ namespace BuildUtil
 		{
 			int cert_id = UsingCertId;
 
-			SignFile(destFileName, srcFileName, comment, kernelModeDriver, cert_id);
+			SignFile(destFileName, srcFileName, comment, kernelModeDriver, cert_id, 0);
 		}
-		public static void SignFile(string destFileName, string srcFileName, string comment, bool kernelModeDriver, int cert_id)
+		public static void SignFile(string destFileName, string srcFileName, string comment, bool kernelModeDriver, int cert_id, int sha_mode)
 		{
 #if	!BU_OSS
+			if (cert_id == 0)
+			{
+				cert_id = UsingCertId;
+			}
+
 			Con.WriteLine("Signing for '{0}'...", Path.GetFileName(destFileName));
 			byte[] srcData = File.ReadAllBytes(srcFileName);
-
-			int sha_mode = 0;
 
 			if (srcFileName.EndsWith(".msi", StringComparison.InvariantCultureIgnoreCase))
 			{

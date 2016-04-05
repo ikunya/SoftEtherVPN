@@ -3,9 +3,9 @@
 // 
 // SoftEther VPN Server, Client and Bridge are free software under GPLv2.
 // 
-// Copyright (c) 2012-2015 Daiyuu Nobori.
-// Copyright (c) 2012-2015 SoftEther VPN Project, University of Tsukuba, Japan.
-// Copyright (c) 2012-2015 SoftEther Corporation.
+// Copyright (c) 2012-2016 Daiyuu Nobori.
+// Copyright (c) 2012-2016 SoftEther VPN Project, University of Tsukuba, Japan.
+// Copyright (c) 2012-2016 SoftEther Corporation.
 // 
 // All Rights Reserved.
 // 
@@ -1322,6 +1322,8 @@ namespace BuildUtil
 				new ConsoleParam("DEST"),
 				new ConsoleParam("COMMENT", ConsoleService.Prompt, "Comment: ", ConsoleService.EvalNotEmpty, null),
 				new ConsoleParam("KERNEL"),
+				new ConsoleParam("CERTID"),
+				new ConsoleParam("SHAMODE"),
 			};
 			ConsoleParamValueList vl = c.ParseCommandList(cmdName, str, args);
 
@@ -1334,7 +1336,10 @@ namespace BuildUtil
 			string comment = vl["COMMENT"].StrValue;
 			bool kernel = vl["KERNEL"].BoolValue;
 
-			CodeSign.SignFile(destFileName, srcFileName, comment, kernel);
+			int certid = vl["CERTID"].IntValue;
+			int shamode = vl["SHAMODE"].IntValue;
+
+			CodeSign.SignFile(destFileName, srcFileName, comment, kernel, certid, shamode);
 
 			return 0;
 		}
